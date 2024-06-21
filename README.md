@@ -37,3 +37,50 @@ Stworzenie modelu sztucznej inteligencji, do wyceny pojazdu na podstawie jego da
 
 ## Zestaw danych
 Zebrany ręcznie
+
+## Dokumentacja
+### Biblioteki
+* Sklearn
+* Numpy
+* Pandas
+* Matplotlib
+* Seaborn 
+
+### Określenie potrzeb sprzętowych
+Minimalne wymagania sprzętowe to: 
+RAM: 2+ GB 
+CPU: 2+ rdzenie 
+Dysk: 20 GB
+Są one wymagane aby uruchomić serwer jupyter notebook 
+
+### Zarzadzanie kodem i wersjami 
+
+Zarządzanie kodem odbywa się za pomocą systemu kontroli wersji git oraz za pomocą strony guthub.com.
+Aktualnie dostępna jest jedna wersja projektu. 
+
+### Struktura projektu
+
+W głównym folderze znajdują się takie pliki jak cardatapreparation.ipynb oraz ModelSelection.ipynb 
+
+Cardatapreparation.ipynb odpowiedzialny jest za obróbkę danych znajdujących się w “data/used_cars.csv”. 
+Znajduje się tam między innymi: 
+- wyciągane cechy do wielu kolumn z kolumn zawierających wiele informacji, 
+- uzupełniane brakujące dane 
+- analiza danych 
+- usuwane odstające wartości 
+- wybór cech 
+- zapisywanie danych do pliku “cleaned_car_data.csv” w folderze “data” 
+
+W ModelSelection.ipynb testowana jest efektywność modeli z różnymi parametrami. Te modele to:
+- Regresja Liniowa
+- Drzewo decyzyjne
+- Las losowy 
+- Regresja Ridge 
+- Regresja Lasso
+- SVM
+- Gradient Boosting Regressor
+- AdaBoost
+- Bagging
+- Stacking 
+
+Oceniane są one na podstawie średniego błędu bezwględnego (MAE), średniego błędu kwadratowego (MSE), mediany błędu bezwzględnego (MedAE) oraz czasu wykonania. 
